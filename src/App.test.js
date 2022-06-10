@@ -1,9 +1,24 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import { shallow } from 'enzyme';
+
+import App from '../App';
+
+import EventList from '../EventList';
+import CitySearch from '../CitySearch';
+
+describe('<App /> component', () => {
+
+  let AppWrapper;
+  beforeAll(() => {
+    AppWrapper = shallow(<App />);
+  });
+
+  test('render list of events', () => {
+    expect(AppWrapper.find(EventList)).toHaveLength(1);
+  });
+
+  test('render CitySearch', () => {
+    expect(AppWrapper.find(CitySearch)).toHaveLength(1);
+  });
 });
