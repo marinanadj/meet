@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import * as service-Worker from './service-Worker';
+import * as atatus from 'atatus-js';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
-import * as atatus from 'atatus-spa';
 
 atatus.config('61837fd4309e45c18faeaadfe0be03b4').install();
 
