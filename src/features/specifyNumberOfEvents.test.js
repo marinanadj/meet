@@ -4,12 +4,24 @@ import { mount } from "enzyme";
 import App from "../App";
 import NumberOfEvents from "../NumberOfEvents";
 
-const feature = loadFeature('./src/features/specifyNumberEvents.feature');
+const feature = loadFeature('./src/features/specifyNumberOfEvents.feature');
 let AppWrapper;
 
 defineFeature(feature, test => {
 
-    
+    test('When user hasn\'t specified a number, 32 is the default number.', ({ given, when, then }) => {
+        given('the user is on the main page of the app', () => {
+
+        });
+
+        when('the user hasn\'t specified a number of events', () => {
+
+        });
+
+        then(/^the default number of displayed events will be (\d+)$/, (arg0) => {
+
+        });
+    });
 
     test('When user hasn’t specified a number, 12 is the default number', ({ given, when, then }) => {
         given('the user has not specified a number of events to show', () => {
