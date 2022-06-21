@@ -36,9 +36,9 @@ defineFeature(feature, test => {
         });
 
         then('the number of events displayed should match the number', () => {
-            // const NumberOfEventsWrapper = mount(<NumberOfEvents />);
+            const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
             AppWrapper.update();
-            expect(AppWrapper.find(".event")).toHaveLength(1);
+            expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(1);
         });
     });
 });

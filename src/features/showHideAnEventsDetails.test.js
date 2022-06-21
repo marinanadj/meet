@@ -19,7 +19,7 @@ defineFeature(feature, test => {
         });
 
         then('all the events are collapsed', () => {
-            expect(AppWrapper.find('.extra-details')).toHaveLength(0);
+            expect(AppWrapper.find('.event_Details')).toHaveLength(0);
         });
     });
 
@@ -30,11 +30,11 @@ defineFeature(feature, test => {
 
         when('the user clicks on one of them', () => {
             AppWrapper.update();
-            AppWrapper.find('.details-button').at(0).simulate('click');
+            AppWrapper.find('.details-btn').at(0).simulate('click');
         });
 
         then('the element expands showing the details', () => {
-            expect(AppWrapper.find('.extra-details')).toHaveLength(1);
+            expect(AppWrapper.find('.event_Details')).toHaveLength(1);
         });
     });
 
@@ -42,15 +42,14 @@ defineFeature(feature, test => {
         given('an expanded element', async () => {
             AppWrapper = await mount(<App />);
             AppWrapper.update();
-            AppWrapper.find('.details-button').at(0).simulate('click');
-        });
-
+            AppWrapper.find('.details-btn').at(0).simulate('click');
+       
         when('the user clicks on Hide Event', () => {
-            AppWrapper.find('.details-button').at(0).simulate('click');
+            AppWrapper.find('.details-btn').at(0).simulate('click');
         });
 
         then('the element collapses', () => {
-            expect(AppWrapper.find('.extra-details')).toHaveLength(0);
+            expect(AppWrapper.find('.event_Details')).toHaveLength(0);
         });
     });
 
