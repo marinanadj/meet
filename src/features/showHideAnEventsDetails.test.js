@@ -34,7 +34,7 @@ defineFeature(feature, test => {
         });
 
         then('the element expands showing the details', () => {
-            expect(AppWrapper.find('.event_Details')).toHaveLength(1);
+            expect(AppWrapper.find('.event_Details').toHaveLength(1)
         });
     });
 
