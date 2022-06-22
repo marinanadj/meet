@@ -30,7 +30,7 @@ defineFeature(feature, (test) => {
 
         when('the user set a number of events he or she wants to see in the “Number of events” box', () => {
             const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents)
-            NumberOfEventsWrapper.find('.inputNumberOfEvents').simulate('change', { target: { value: 1 } });
+            NumberOfEventsWrapper.find('.events_number__input').simulate('change', { target: { value: 1 } });
         });
 
         then('this number of events will be displayed', () => {
