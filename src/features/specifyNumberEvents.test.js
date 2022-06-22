@@ -37,7 +37,7 @@ defineFeature(feature, (test) => {
             const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
             AppWrapper.update();
 
-            expect(NumberOfEventWrapper.state('numberOfEvents')).toBe(1);
+            expect(NumberOfEventsWrapper.state('numberOfEvents')).toBe(1)
         });
     });
-});
+})

@@ -57,7 +57,7 @@ class App extends Component {
           locations={this.state.locations}
           updateEvents={this.updateEvents}
         />
-        <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
+      <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} updateEvents={() => this.updateEvents()} />
         <EventList events={this.state.events} />
         {!navigator.onLine && <OfflineAlert text={'You are currently offline, data may be not updated.'}/>}
       </div>
