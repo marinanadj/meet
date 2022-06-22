@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { ErrorAlert } from './Alert';
 
 class NumberOfEvents extends Component {
-
   state = { 
     numberOfEvents : 1
   }
@@ -12,7 +11,7 @@ class NumberOfEvents extends Component {
     if ((newValue > 33) || (newValue < 1)) {
       this.setState({
         numberOfEvents: newValue,
-        infoText: 'Please choose a number between 1 and 32',
+        infoText: 'Please choose any number between 1 and 32',
       })
     } else {
       this.setState({
@@ -26,7 +25,7 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <>
-      <div className="numberOfEvents text-muted">How many events would you like to see?</div>
+      <div className="numberOfEvents text-muted">How many events would you like to see on this page?</div>
       <input 
             className="events_number__input my-3" 
             type="number" 
